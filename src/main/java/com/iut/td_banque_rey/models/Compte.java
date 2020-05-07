@@ -1,19 +1,28 @@
 package com.iut.td_banque_rey.models;
 
-public class Compte {
+public abstract class Compte {
 	
 	protected double solde;
 	protected String numCompte;
-	protected String numClient;
-	
+	//TODO: rajouter enum pour le type de compte
 	public Compte(double solde, String numCompte) {
+		if(verifieNum(numCompte) == false) {
+			throw new IllegalArgumentException("Le numéro de compte ne peut pas être null");
+		}
 		this.solde = solde;
 		this.numCompte = numCompte;
 	}
 	
-	public void debiter(double montant) {
-		this.solde = solde - montant;
+	public boolean verifieNum(String num) {
+		if(num == null) {
+			return false;
+		}
+		else {
+			return true;
+		}
 	}
+	
+	public abstract void debiter(double montant) throws Exception;
 	
 	public void crediter(double montant) {
 		this.solde = solde + montant;
@@ -32,4 +41,5 @@ public class Compte {
 		this.numCompte = numCompteString;
 	}
 	
+
 }

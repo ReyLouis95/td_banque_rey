@@ -4,6 +4,4 @@ import com.iut.td_banque_rey.models.Client;
 
 public interface IClientDao extends IDao<Client> {
 
-	Client getClientById(int id);
-
 }

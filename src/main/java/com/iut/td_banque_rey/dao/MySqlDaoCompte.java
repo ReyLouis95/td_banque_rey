@@ -8,24 +8,25 @@ import com.iut.td_banque_rey.models.Compte;
 public class MySqlDaoCompte implements ICompteDao{
 
 	@Override
-	public void create(Compte objet) {
+	public boolean create(Compte objet) {
 		// TODO Auto-generated method stub
+		return false;
 	}
 
 	@Override
-	public void update(Compte objet) {
+	public boolean update(Compte objet) {
 		// TODO Auto-generated method stub
-		
+		return false;
 	}
 
 	@Override
-	public void delete(Compte objet) {
+	public boolean delete(Compte objet) {
 		// TODO Auto-generated method stub
-		
+		return false;
 	}
 
 	@Override
-	public Compte read() {
+	public Compte read(Compte objet) {
 		// TODO Auto-generated method stub
 		return null;
 	}

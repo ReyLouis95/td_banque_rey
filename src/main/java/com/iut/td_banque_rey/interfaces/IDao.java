@@ -4,16 +4,24 @@ import java.util.List;
 
 public interface IDao<T> {
 
-	void create(T objet);
+	boolean create(T objet);
 
-	void update(T objet);
+	boolean update(T objet);
 
-	void delete(T objet);
+	boolean delete(T objet);
 
-	T read();
-
-	List<T> getList();
+	/**
+	 * get by id
+	 * @param objet
+	 * @return l'objet en fonction de son id
+	 */
+	T read(T objet);
 	
+	/**
+	 * readAll
+	 * @return 
+	 */
+	List<T> getList();
 }
 
 
